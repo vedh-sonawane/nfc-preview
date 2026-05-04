@@ -9,6 +9,8 @@ A complete personal profile page designed for NFC card interaction.
 3. Deploy to Vercel, Netlify, or GitHub Pages
 4. Store your URL on the NFC tag
 
+(Note: Resume and profile photo are ignored by Git for privacy. Add your own to the root folder.)
+
 ## Files
 
 ```
