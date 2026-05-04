@@ -120,40 +120,6 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-// ===========================
-// COPY EMAIL
-// ===========================
-document.getElementById('copyEmail').addEventListener('click', () => {
-  navigator.clipboard.writeText('sonawane.vedj14@gmail.com').then(() => {
-    showToast('Email copied to clipboard ✓');
-  });
-});
-
-// ===========================
-// SAVE CONTACT (vCard)
-// ===========================
-document.getElementById('saveContactBtn').addEventListener('click', () => {
-  const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Vedh Sonawane
-N:Sonawane;Vedh;;;
-EMAIL;TYPE=INTERNET:sonawane.vedj14@gmail.com
-TEL;TYPE=CELL:+14165706858
-URL:https://vedh-sonawane.vercel.app/
-X-SOCIALPROFILE;type=github:https://github.com/vedh-sonawane
-X-SOCIALPROFILE;type=linkedin:https://www.linkedin.com/in/vedh-sonawane-60a0753bb/
-NOTE:Software Engineer & Builder — Hardware meets Software
-END:VCARD`;
-
-  const blob = new Blob([vcard], { type: 'text/vcard' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'Vedh_Sonawane.vcf';
-  a.click();
-  URL.revokeObjectURL(url);
-  showToast('Contact saved as .vcf ↓');
-});
 
 // ===========================
 // SECRET MODE
