@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vedh Sonawane</title>
+  <meta name="description" content="Vedh Sonawane — Software Engineer & Builder" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Cabinet+Grotesk:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: black;
+}
+
+</style>
+<body>
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">VS</div>
+    <div class="nav-links">
+      <a href="#projects">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="https://vedh-sonawane.vercel.app/" target="_blank">Site ↗</a>
+    </div>
+    <button class="secret-btn" id="secretBtn" title="Secret mode">⬡</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">
+      <span class="dot-pulse"></span>
+      <span id="spotifyWidget">Loading now playing...</span>
+    </div>
+
+      <h1 class="hero-name">
+        <span class="line" data-text="Vedh">Vedh</span>
+        <span class="line italic" data-text="Sonawane">Sonawane</span>
+      </h1>
+    </div>
+
+    <div class="hero-footer">
+      <div class="hero-bio">
+        <p>Software engineer & systems thinker. I build things that live at the intersection of hardware and software — from PCB designs to full-stack web apps. Currently seeking opportunities to ship meaningful products.</p>
+      </div>
+      <div class="hero-meta">
+        <span class="badge">Toronto, ON</span>
+        <span class="badge available">Open to work</span>
+        <div class="visitor-counter">
+          <span class="counter-label">You're visitor</span>
+          <span class="counter-num" id="visitorNum">#—</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- LINKS GRID -->
+  <section class="links-section" id="links">
+    <div class="section-label">/ connect</div>
+    <div class="links-grid">
+      <a href="https://github.com/vedh-sonawane" target="_blank" class="link-card" data-index="01">
+        <div class="link-card-top">
+          <span class="link-icon">⌥</span>
+          <span class="link-arrow">↗</span>
+        </div>
+        <div class="link-card-body">
+          <h3>GitHub</h3>
+          <p>vedh-sonawane</p>
+          <div class="github-stats" id="githubStats">
+            <span class="stat">— repos</span>
+            <span class="stat">— followers</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/vedh-sonawane-60a0753bb/" target="_blank" class="link-card" data-index="02">
+        <div class="link-card-top">
+          <span class="link-icon">◈</span>
+          <span class="link-arrow">↗</span>
+        </div>
+        <div class="link-card-body">
+          <h3>LinkedIn</h3>
+          <p>vedh-sonawane</p>
+        </div>
+      </a>
+
+      <a href="https://vedh-sonawane.vercel.app/" target="_blank" class="link-card featured" data-index="03">
+        <div class="link-card-top">
+          <span class="link-icon">◎</span>
+          <span class="link-arrow">↗</span>
+        </div>
+        <div class="link-card-body">
+          <h3>Portfolio</h3>
+          <p>vedh-sonawane.vercel.app</p>
+        </div>
+      </a>
+
+      <a href="Vedh_Sonawane_Resume(1).docx" target="_blank" class="link-card" data-index="04" id="resumeLink">
+        <div class="link-card-top">
+          <span class="link-icon">⊟</span>
+          <span class="link-arrow">↓</span>
+        </div>
+        <div class="link-card-body">
+          <h3>Résumé</h3>
+          <p>Download PDF</p>
+        </div>
+      </a>
+
+      <button class="link-card save-contact" data-index="05" id="saveContactBtn">
+        <div class="link-card-top">
+          <span class="link-icon">⊕</span>
+          <span class="link-arrow">+</span>
+        </div>
+        <div class="link-card-body">
+          <h3>Save Contact</h3>
+          <p>Add to phone</p>
+        </div>
+      </button>
+
+      <a href="mailto:sonawane.vedh14@gmail.com" class="link-card" data-index="06">
+        <div class="link-card-top">
+          <span class="link-icon">◷</span>
+          <span class="link-arrow">→</span>
+        </div>
+        <div class="link-card-body">
+          <h3>Email</h3>
+          <p>sonawane.vedh14@gmail.com</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects-section" id="projects">
+    <div class="section-label">/ work</div>
+    <div class="projects-list">
+
+      <div class="project-item" data-index="01">
+        <div class="project-number">01</div>
+        <div class="project-content">
+          <h2 class="project-title">NFC Business Card <span class="project-tag">hardware</span></h2>
+          <p class="project-desc">Custom PCB-based NFC smart card that acts as a dynamic identity hub. Tap to reveal portfolio, resume, and social links — all stored as a single URL with multi-mode routing.</p>
+          <div class="project-stack">
+            <span>PCB Design</span>
+            <span>NFC</span>
+            <span>Web</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/vedh-sonawane" target="_blank">View →</a>
+        </div>
+      </div>
+
+      <div class="project-item" data-index="02">
+        <div class="project-number">02</div>
+        <div class="project-content">
+          <h2 class="project-title">Full-Stack Portfolio <span class="project-tag">web</span></h2>
+          <p class="project-desc">Personal portfolio built with modern web technologies. Deployed on Vercel with responsive design, project showcases, and live interactive demos.</p>
+          <div class="project-stack">
+            <span>Next.js</span>
+            <span>React</span>
+            <span>Vercel</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://vedh-sonawane.vercel.app/" target="_blank">View →</a>
+        </div>
+      </div>
+
+      <div class="project-item" data-index="03">
+        <div class="project-number">03</div>
+        <div class="project-content">
+          <h2 class="project-title">GitHub Projects <span class="project-tag">open source</span></h2>
+          <p class="project-desc">A collection of open-source experiments, utilities, and side projects. Everything from embedded systems to web tooling — built to learn, shipped to share.</p>
+          <div class="project-stack">
+            <span>Various</span>
+            <span>Open Source</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/vedh-sonawane" target="_blank">View →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="interactive-grid-container" id="contactGridContainer">
+      <div class="grid-left-base"></div>
+      <div class="grid-left-hover"></div>
+      <div class="grid-right-static"></div>
+      <div class="grid-lens"></div>
+    </div>
+    <div class="section-label">/ say hello</div>
+    <div class="contact-content">
+      <h2 class="contact-headline">
+        Let's build<br/><em>something</em><br/>together.
+      </h2>
+      <div class="contact-details">
+        <div class="contact-item" id="copyEmail">
+          <span class="contact-key">Email</span>
+          <span class="contact-val">sonawane.vedj14@gmail.com <span class="copy-hint">click to copy</span></span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-key">Phone</span>
+          <a href="tel:4165706858" class="contact-val">+1 (416) 570-6858</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-key">Discord</span>
+          <span class="contact-val">1481775974306812017</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-key">Book a call</span>
+          <a href="https://cal.com" target="_blank" class="contact-val">cal.com ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span>© 2025 Vedh Sonawane</span>
+      <span class="footer-time" id="footerTime"></span>
+    </div>
+    <div class="footer-right">
+      <span>Built with intention.</span>
+    </div>
+  </footer>
+
+  <!-- SECRET MODE OVERLAY -->
+  <div class="secret-overlay" id="secretOverlay">
+    <button class="secret-close" id="secretClose">✕</button>
+    <div class="secret-content">
+      <div class="secret-header">
+        <div class="secret-eye">◎</div>
+        <h2>secret mode</h2>
+        <p>you found it.</p>
+      </div>
+      <div class="easter-egg-game" id="easterEgg">
+        <p class="game-label">type the konami code</p>
+        <div class="konami-display" id="konamiDisplay">
+          <span>↑</span><span>↑</span><span>↓</span><span>↓</span>
+          <span>←</span><span>→</span><span>←</span><span>→</span>
+          <span>B</span><span>A</span>
+        </div>
+        <div class="konami-progress" id="konamiProgress"></div>
+        <div class="konami-reward" id="konamiReward" style="display:none">
+          <div class="reward-text">🎉 Achievement Unlocked: Nerd Mode</div>
+          <p>discord: 1481775974306812017</p>
+          <p>Built this card from raw FR4 and solder. Respect.</p>
+        </div>
+      </div>
+      <div class="secret-links">
+        <a href="mailto:sonawane.vedj14@gmail.com">drop me a line →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+  <script src="js/hexagons.js"></script>
+</body>
+</html>

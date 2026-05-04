@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vedh Sonawane — Recruiter View</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080808;
+      --text: #f0ede6;
+      --text-muted: #6b6560;
+      --accent: #d4ff6e;
+      --border: rgba(240, 237, 230, 0.08);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-mono: 'DM Mono', monospace;
+      --font-body: 'Cabinet Grotesk', system-ui, sans-serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    h1 em { font-style: italic; color: var(--text-muted); }
+    p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .link-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      background: var(--bg);
+      text-decoration: none;
+      color: var(--text);
+      transition: background 0.2s;
+    }
+    .link-row:hover { background: #111; }
+    .link-row span:first-child {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .link-row span:last-child {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+    .back {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
+    }
+    .back:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="eyebrow">recruiter view · confidential</div>
+    <h1>Vedh<br/><em>Sonawane</em></h1>
+    <p>Software engineer with a hardware soul. I build end-to-end — from PCB layouts to production web apps. Here's everything you need.</p>
+
+    <div class="links">
+      <a href="Vedh_Sonawane_Resume.pdf" target="_blank" class="link-row">
+        <span>Résumé</span>
+        <span>Download PDF ↓</span>
+      </a>
+      <a href="https://vedh-sonawane.vercel.app/" target="_blank" class="link-row">
+        <span>Portfolio</span>
+        <span>vedh-sonawane.vercel.app ↗</span>
+      </a>
+      <a href="https://github.com/vedh-sonawane" target="_blank" class="link-row">
+        <span>GitHub</span>
+        <span>github.com/vedh-sonawane ↗</span>
+      </a>
+      <a href="https://www.linkedin.com/in/vedh-sonawane-60a0753bb/" target="_blank" class="link-row">
+        <span>LinkedIn</span>
+        <span>vedh-sonawane ↗</span>
+      </a>
+      <a href="mailto:sonawane.vedj14@gmail.com" class="link-row">
+        <span>Email</span>
+        <span>sonawane.vedj14@gmail.com →</span>
+      </a>
+      <a href="tel:4165706858" class="link-row">
+        <span>Phone</span>
+        <span>+1 (416) 570-6858 →</span>
+      </a>
+    </div>
+
+    <a href="index.html" class="back">← back to main page</a>
+  </div>
+  <script src="js/hexagons.js"></script>
+</body>
+</html>
